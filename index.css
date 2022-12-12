@@ -1,0 +1,23 @@
+#formulario {
+    display: flex;
+    justify-content: center;
+}
+
+#inscripcion {
+    text-align: center;
+    background: #FC466B;
+    background: linear-gradient(to bottom right, #FC466B 0%, #3F5EFB 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.boton {
+    align-items: center;
+}
+
+.txt {
+    background: #FC466B;
+    background: linear-gradient(to bottom right, #FC466B 0%, #3F5EFB 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
