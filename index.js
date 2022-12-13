@@ -13,14 +13,14 @@ form.addEventListener("submit", (e) => {
 
     //prevenir accion por defecto//
 
-e.preventDefault();
+e.target.preventDefault();
 
 //objeto que contenga los valores de la forma//
 const formulario = {
     name: nombre.value,
-    correo: correo.value,
+    correo: email.value,
     job: trabajo.value,
-    tel: telefono.value,
+    tel: tel.value,
     text: texto.value,
 
 }
@@ -31,11 +31,40 @@ console.log(formulario);
 
 });
 
-const submit = document.getElementById("submit");
+const submit = document.getElementById("boton");
 
 submit.addEventListener("click", (e) => {
     console.log(e.target);
 });
 
+//Funcion que cree conteido HTML dimanicamente//
+    function crearCuadroDeForma(nombre, correo, trabajo, telefono,texto){
+        const cuadroHtml = 
+        `<div class"contenido">
+        <h3>${nombre}</h3>
+        <p>${correo}</p>
+        <p>${trabajo}</p>
+        <p>${telefono}</p>
+        <p>${texto}</p>` 
 
+        return cuadroHtml;
+    }
 
+// const cuadroHtmlConInfo = crearCuadroDeForma("Ulises", "email@test.com");
+
+// Llamar al button submit
+const boton = document.getElementById("boton");
+
+submit.addEventListener("click", (e) => {
+  console.log(e.target)
+});
+
+// Validar nombre
+function validarNombre(nombre) {
+
+  if (nombre != " ") {
+    return true; //
+
+    }
+
+}
